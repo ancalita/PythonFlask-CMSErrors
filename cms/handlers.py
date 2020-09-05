@@ -26,5 +26,5 @@ access_log = configure_logging('access', INFO)
 @app.after_request
 def after_request(response):
     if int(response.status_code) < 400:
-        access_log.info(format='%s - - %s "%s %s %s" %s -', request.remote_addr, timestamp, request.method, request.path, request.scheme.upper(), response.status_code)
+        access_log.info('%s - - %s "%s %s %s" %s -', request.remote_addr, timestamp, request.method, request.path, request.scheme.upper(), response.status_code)
     return response
