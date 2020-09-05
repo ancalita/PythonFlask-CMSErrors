@@ -20,7 +20,7 @@ def configure_logging(name, level):
     log.addHandler(handler)
     return log
 
-timestamp = strftime("[%d/%b/%Y, %H:%M:%S]")
+timestamp = strftime("[%d/%b/%Y %H:%M:%S]")
 access_log = configure_logging('access', INFO)
 
 @app.after_request
