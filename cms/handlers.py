@@ -8,7 +8,7 @@ from logging.handlers import RotatingFileHandler
 from time import strftime
 from logging import INFO, WARN, ERROR
 from traceback import format_exc
-from auth.py import unauthorized
+from cms.admin.auth import unauthorized
 #!
 
 @app.context_processor
